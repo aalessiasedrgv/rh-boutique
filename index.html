@@ -1,56 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RH Boutique</title>
 <style>
-body{
-font-family: Arial;
-text-align:center;
-background:#f5f5f5;
-}
-
-h1{
-color:black;
-margin-top:40px;
-}
-
-.product{
-background:white;
-padding:20px;
-margin:20px;
-border-radius:10px;
-display:inline-block;
-width:250px;
-}
-
-.price{
-color:#e91e63;
-font-weight:bold;
-font-size:20px;
-}
+/* RESET DI BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background-color: #f9f7f6; color: #333; line-height: 1.6; }
+/* HEADER */
+header { background-color: #fff; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
+header h1 { color: #e91e63; font-size: 28px; }
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
+nav ul li a:hover { color: #e91e63; }
+/* HERO */
+#hero { background: url('https://images.unsplash.com/photo-1600185369346-2df7f6d6e9d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGZhc2hpb258ZW58MHx8MHx8&ixlib=rb-4.0.3&q=80&w=1080') center/cover no-repeat; color: #fff; text-align: center; padding: 120px 20px; }
+#hero h2 { font-size: 48px; margin-bottom: 20px; }
+#hero p { font-size: 20px; margin-bottom: 30px; }
+#hero button { background-color: #e91e63; color: #fff; border: none; padding: 15px 30px; font-size: 18px; cursor: pointer; border-radius: 5px; transition: background-color 0.3s; }
+#hero button:hover { background-color: #c2185b; }
+/* CHI SIAMO */
+#chi-siamo { padding: 60px 20px; text-align: center; }
+#chi-siamo h2 { color: #e91e63; margin-bottom: 20px; font-size: 36px; }
+/* PRODOTTI */
+#prodotti { padding: 60px 20px; background-color: #fff; text-align: center; }
+#prodotti h2 { color: #e91e63; margin-bottom: 40px; font-size: 36px; }
+.prodotti-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.prodotto { background-color: #f2f2f2; border-radius: 10px; overflow: hidden; width: 250px; padding: 15px; transition: transform 0.3s; }
+.prodotto img { width: 100%; height: auto; display: block; margin-bottom: 15px; }
+.prodotto h3 { color: #e91e63; margin-bottom: 10px; }
+.prodotto p { font-size: 14px; }
+.prodotto:hover { transform: translateY(-5px); }
+/* CONTATTI */
+#contatti { padding: 60px 20px; text-align: center; }
+#contatti h2 { color: #e91e63; margin-bottom: 20px; font-size: 36px; }
+#contatti form { max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+#contatti input, #contatti textarea { padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
+#contatti button { background-color: #e91e63; color: #fff; border: none; padding: 15px; font-size: 18px; cursor: pointer; border-radius: 5px; transition: background-color 0.3s; }
+#contatti button:hover { background-color: #c2185b; }
+/* FOOTER */
+footer { background-color: #333; color: #fff; padding: 20px; text-align: center; }
 </style>
 </head>
-
 <body>
+<header>
+    <h1>RH Boutique</h1>
+    <nav>
+        <ul>
+            <li><a href="#chi-siamo">Chi siamo</a></li>
+            <li><a href="#prodotti">Prodotti</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+    </nav>
+</header>
 
-<h1>RH Boutique</h1>
-<p>Brand creato da Alessia Maio</p>
-<p>Vestiti da sera eleganti</p>
+<section id="hero">
+    <h2>Benvenuti da RH Boutique</h2>
+    <p>Scopri la nostra collezione esclusiva di abbigliamento e accessori.</p>
+    <button>Scopri di più</button>
+</section>
 
-<div class="product">
-<h3>Abito Midnight Elegance</h3>
-<p class="price">€79</p>
-</div>
+<section id="chi-siamo">
+    <h2>Chi siamo</h2>
+    <p>RH Boutique nasce dalla passione per la moda e l’eleganza. Offriamo prodotti selezionati con cura per ogni occasione.</p>
+</section>
 
-<div class="product">
-<h3>Abito Rose Glam</h3>
-<p class="price">€75</p>
-</div>
+<section id="prodotti">
+    <h2>I nostri prodotti</h2>
+    <div class="prodotti-grid">
+        <div class="prodotto">
+            <img src="https://images.unsplash.com/photo-1618354694307-174a46e0f372?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdGhlc3xlbnwwfHwwfHw%3D&ixlib=rb-4.0.3&q=80&w=400" alt="Prodotto 1">
+            <h3>Prodotto 1</h3>
+            <p>Elegante e raffinato, perfetto per ogni occasione.</p>
+        </div>
+        <div class="prodotto">
+            <img src="https://images.unsplash.com/photo-1618354792297-1b37f2d1b9b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNsYXRob3RzfGVufDB8fDB8fA%3D%3D&ixlib=rb-4.0.3&q=80&w=400" alt="Prodotto 2">
+            <h3>Prodotto 2</h3>
+            <p>Stile unico e qualità superiore, da non perdere.</p>
+        </div>
+    </div>
+</section>
 
-<div class="product">
-<h3>Abito Red Luxury</h3>
-<p class="price">€80</p>
-</div>
+<section id="contatti">
+    <h2>Contattaci</h2>
+    <p>Email: info@rhboutique.com</p>
+    <p>Telefono: 123-456-789</p>
+    <form>
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Messaggio" required></textarea>
+        <button type="submit">Invia</button>
+    </form>
+</section>
 
+<footer>
+    <p>&copy; 2026 RH Boutique. Tutti i diritti riservati.</p>
+</footer>
 </body>
 </html>
